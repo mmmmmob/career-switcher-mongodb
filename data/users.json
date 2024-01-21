@@ -1,0 +1,17 @@
+[
+  {
+    "name": "mock user 1",
+    "age": 18,
+    "weight": 26
+  },
+  {
+    "name": "mock user 2",
+    "age": 25,
+    "weight": 30
+  },
+  {
+    "name": "mock user 3",
+    "age": 30,
+    "weight": 22
+  }
+]

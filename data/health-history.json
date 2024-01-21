@@ -1,0 +1,62 @@
+[
+  {
+    "duration": 45,
+    "distance": 5.2,
+    "average_heart_rate": 140,
+    "user_id": 1
+  },
+  {
+    "duration": 30,
+    "distance": 3.8,
+    "average_heart_rate": 125,
+    "user_id": 2
+  },
+  {
+    "duration": 60,
+    "distance": 7.5,
+    "average_heart_rate": 150,
+    "user_id": 3
+  },
+  {
+    "duration": 40,
+    "distance": 4.5,
+    "average_heart_rate": 135,
+    "user_id": 4
+  },
+  {
+    "duration": 55,
+    "distance": 6.0,
+    "average_heart_rate": 142,
+    "user_id": 5
+  },
+  {
+    "duration": 25,
+    "distance": 2.5,
+    "average_heart_rate": 120,
+    "user_id": 6
+  },
+  {
+    "duration": 50,
+    "distance": 6.8,
+    "average_heart_rate": 148,
+    "user_id": 7
+  },
+  {
+    "duration": 35,
+    "distance": 4.0,
+    "average_heart_rate": 130,
+    "user_id": 8
+  },
+  {
+    "duration": 48,
+    "distance": 5.5,
+    "average_heart_rate": 145,
+    "user_id": 9
+  },
+  {
+    "duration": 42,
+    "distance": 4.7,
+    "average_heart_rate": 138,
+    "user_id": 10
+  }
+]

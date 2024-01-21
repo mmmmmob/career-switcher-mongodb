@@ -1,0 +1,92 @@
+[
+  {
+    "duration": 45,
+    "distance": 5.2,
+    "average_heart_rate": 140,
+    "weight": 68,
+    "age": 28,
+    "id": 1,
+    "name": "John"
+  },
+  {
+    "duration": 30,
+    "distance": 3.8,
+    "average_heart_rate": 125,
+    "weight": 70,
+    "age": 35,
+    "id": 2,
+    "name": "Alice"
+  },
+  {
+    "duration": 60,
+    "distance": 7.5,
+    "average_heart_rate": 150,
+    "weight": 72,
+    "age": 40,
+    "id": 3,
+    "name": "Bob"
+  },
+  {
+    "duration": 40,
+    "distance": 4.5,
+    "average_heart_rate": 135,
+    "weight": 65,
+    "age": 32,
+    "id": 4,
+    "name": "Emily"
+  },
+  {
+    "duration": 55,
+    "distance": 6.0,
+    "average_heart_rate": 142,
+    "weight": 75,
+    "age": 45,
+    "id": 5,
+    "name": "David"
+  },
+  {
+    "duration": 25,
+    "distance": 2.5,
+    "average_heart_rate": 120,
+    "weight": 60,
+    "age": 25,
+    "id": 6,
+    "name": "Sophia"
+  },
+  {
+    "duration": 50,
+    "distance": 6.8,
+    "average_heart_rate": 148,
+    "weight": 73,
+    "age": 38,
+    "id": 7,
+    "name": "Chris"
+  },
+  {
+    "duration": 35,
+    "distance": 4.0,
+    "average_heart_rate": 130,
+    "weight": 69,
+    "age": 30,
+    "id": 8,
+    "name": "Olivia"
+  },
+  {
+    "duration": 48,
+    "distance": 5.5,
+    "average_heart_rate": 145,
+    "weight": 71,
+    "age": 36,
+    "id": 9,
+    "name": "Michael"
+  },
+  {
+    "duration": 42,
+    "distance": 4.7,
+    "average_heart_rate": 138,
+    "weight": 67,
+    "age": 33,
+    "id": 10,
+    "name": "Emma"
+  }
+]
