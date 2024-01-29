@@ -1,13 +1,13 @@
-import dotenv from "dotenv";
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
-import multer from "multer";
 import { ObjectId } from "mongodb";
+import multer from "multer";
 import databaseClient from "./services/database.mjs";
 import { checkMissingField } from "./utils/requestUtils.js";
 
-const HOSTNAME = process.env.SERVER_IP || "127.0.0.1";
-const PORT = process.env.SERVER_PORT || 3000;
+const HOSTNAME = process.env.SERVER_IP;
+const PORT = process.env.SERVER_PORT;
 
 // setting initial configuration for upload file, web server (express), and cors
 const upload = multer({ dest: "uploads/" });
