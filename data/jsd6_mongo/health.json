@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f968"
+  },
+  "duration": 45,
+  "distance": 5.2,
+  "average_heart_rate": 140,
+  "weight": 68,
+  "age": 10,
+  "id": 1,
+  "name": "John",
+  "status": "strong",
+  "award": "golden runner"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f969"
+  },
+  "duration": 30,
+  "distance": 3.8,
+  "average_heart_rate": 125,
+  "weight": 70,
+  "age": 10,
+  "id": 2,
+  "name": "Alice",
+  "status": "strong"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f96a"
+  },
+  "duration": 60,
+  "distance": 7.5,
+  "average_heart_rate": 150,
+  "weight": 65,
+  "age": 40,
+  "id": 3,
+  "name": "Bob",
+  "award": "golden runner"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f96b"
+  },
+  "duration": 40,
+  "distance": 10,
+  "average_heart_rate": 160,
+  "weight": 65,
+  "age": 10,
+  "id": 4,
+  "name": "Emily",
+  "status": "strong"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f96c"
+  },
+  "duration": 55,
+  "distance": 6,
+  "average_heart_rate": 142,
+  "weight": 65,
+  "age": 45,
+  "id": 5,
+  "name": "David",
+  "award": "golden runner"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f96d"
+  },
+  "duration": 25,
+  "distance": 2.5,
+  "average_heart_rate": 120,
+  "weight": 60,
+  "age": 10,
+  "id": 6,
+  "name": "Sophia",
+  "status": "strong"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f96f"
+  },
+  "duration": 35,
+  "distance": 4,
+  "average_heart_rate": 130,
+  "weight": 69,
+  "age": 10,
+  "id": 8,
+  "name": "Olivia",
+  "status": "strong"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f970"
+  },
+  "duration": 48,
+  "distance": 5.5,
+  "average_heart_rate": 145,
+  "weight": 71,
+  "age": 10,
+  "id": 9,
+  "name": "Michael",
+  "status": "strong",
+  "award": "golden runner"
+},
+{
+  "_id": {
+    "$oid": "65a624d10e732803cec9f971"
+  },
+  "duration": 42,
+  "distance": 4.7,
+  "average_heart_rate": 138,
+  "weight": 67,
+  "age": 10,
+  "id": 10,
+  "name": "Emma",
+  "status": "strong"
+},
+{
+  "_id": {
+    "$oid": "65aa37e30df0538cda1118e0"
+  },
+  "duration": 45,
+  "distance": 5.2,
+  "average_heart_rate": 200,
+  "weight": 65,
+  "age": 30,
+  "id": 1,
+  "name": "Christ",
+  "award": "golden runner"
+}]
