@@ -1,8 +1,8 @@
-import dotenv from "dotenv";
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
-import multer from "multer";
 import { ObjectId } from "mongodb";
+import multer from "multer";
 import databaseClient from "./services/database.mjs";
 import { checkMissingField } from "./utils/requestUtils.js";
 
@@ -17,22 +17,64 @@ webServer.use(cors());
 webServer.use(express.json());
 
 // HEALTH DATA
-const HEALTH_DATA_KEYS = [
-  "duration",
-  "distance",
-  "average_heart_rate",
-  "user_id",
-];
+const COMPANY_DATA_KEYS = ["name", "taxId", "employees"];
+
+const EMPLOYEE_DATA_KEY = ["company_id", "user_id"];
 
 // server routes
+webServer.get("/", async (req, res) => {
+  res.send("Hello, World!");
+});
 
 webServer.get("/company", async (req, res) => {
-  // writing code here
+  const companyData = await databaseClient
+    .db()
+    .collection("company")
+    .find({})
+    .toArray();
+  res.json(companyData);
 });
 
 webServer.post("/company", async (req, res) => {
-  // writing code here
+  let body = req.body;
+  body["employees"] = [];
+  const [isBodyChecked, missingFields] = checkMissingField(
+    COMPANY_DATA_KEYS,
+    body
+  );
+  if (!isBodyChecked) {
+    res.send(`Missing Fields: ${"".concat(missingFields)}`);
+    return;
+  }
+  await databaseClient.db().collection("company").insertOne(body);
+  res.send("Create company successfully");
 });
+
+webServer.post("/company/employee", async (req, res) => {
+  // writing code here
+  let body = req.body;
+  const [isBodyChecked, missingFields] = checkMissingField(
+    EMPLOYEE_DATA_KEY,
+    body
+  );
+  if (!isBodyChecked) {
+    res.send(`Missing Fields: ${"".concat(missingFields)}`);
+    return;
+  }
+
+  await databaseClient
+    .db()
+    .collection("company")
+    .updateOne(
+      {
+        _id: new ObjectId(body.company_id),
+      },
+      { $push: { employees: new ObjectId(body.user_id) } }
+    );
+
+  res.send("Add employee to company successfully");
+});
+
 // initilize web server
 const currentServer = webServer.listen(PORT, HOSTNAME, () => {
   console.log(
