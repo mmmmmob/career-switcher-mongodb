@@ -1,8 +1,8 @@
-import dotenv from "dotenv";
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
-import multer from "multer";
 import { ObjectId } from "mongodb";
+import multer from "multer";
 import databaseClient from "./services/database.mjs";
 import { checkMissingField } from "./utils/requestUtils.js";
 
@@ -17,12 +17,7 @@ webServer.use(cors());
 webServer.use(express.json());
 
 // HEALTH DATA
-const HEALTH_DATA_KEYS = [
-  "duration",
-  "distance",
-  "average_heart_rate",
-  "user_id",
-];
+const USER_DATA_KEYS = ["name", "age", "weight"];
 
 // server routes
 webServer.get("/", async (req, res) => {
@@ -32,7 +27,7 @@ webServer.get("/", async (req, res) => {
 webServer.get("/user", async (req, res) => {
   const healthData = await databaseClient
     .db()
-    .collection("health-history")
+    .collection("users")
     .find({})
     .toArray();
   res.json(healthData);
@@ -41,7 +36,7 @@ webServer.get("/user", async (req, res) => {
 webServer.post("/user", async (req, res) => {
   let body = req.body;
   const [isBodyChecked, missingFields] = checkMissingField(
-    HEALTH_DATA_KEYS,
+    USER_DATA_KEYS,
     body
   );
   if (!isBodyChecked) {
@@ -49,10 +44,8 @@ webServer.post("/user", async (req, res) => {
     return;
   }
 
-  body["user_id"] = new ObjectId(body.user_id);
-
-  await databaseClient.db().collection("health-history").insertOne(body);
-  res.send("Create health data successfully");
+  await databaseClient.db().collection("users").insertOne(body);
+  res.send("Create user data successfully");
 });
 
 // initilize web server
